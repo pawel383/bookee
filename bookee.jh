@@ -1,0 +1,20 @@
+entity Author {
+	name String,
+    lastName String
+}
+
+entity Book {
+	title String,
+    isbn String
+}
+
+
+relationship OneToMany {
+	Author{book} to Book
+}
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
